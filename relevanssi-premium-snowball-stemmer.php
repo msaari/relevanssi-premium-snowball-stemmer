@@ -7,11 +7,11 @@
  * @package Relevanssi Premium Snowball Stemmer
  * @author  Mikko Saari
  * @license https://wordpress.org/about/gpl/ GNU General Public License
- * @see     https://www.relevanssi.com/
+ * @see     https://www.relevanssi.com/snowball-stemmer/
  *
  * @wordpress-plugin
  * Plugin Name: Relevanssi Premium Snowball Stemmer
- * Plugin URI: https://www.relevanssi.com/
+ * Plugin URI: https://www.relevanssi.com/snowball-stemmer/
  * Description: This plugin adds Snowball Stemmer for Relevanssi Premium.
  * Version: 0.1
  * Author: Mikko Saari
@@ -21,9 +21,13 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
+add_filter( 'relevanssi_stemmer', 'relevanssi_premium_snowball_stemmer' );
+
+require 'admin-menu.php';
+
 /**
  * Does the actual stemming. Gets the language from the option
- * `relevanssi_premium_stemmer_language`.
+ * `relevanssi_premium_snowball_stemmer_language`.
  *
  * @param string $word The word to stem.
  *
@@ -32,7 +36,7 @@
 function relevanssi_premium_snowball_stemmer( $word ) {
 	require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-	$language = get_option( 'relevanssi_premium_stemmer_language', 'en' );
+	$language = get_option( 'relevanssi_premium_snowball_stemmer_language', 'en' );
 	try {
 		$stemmer = Wamania\Snowball\StemmerFactory::create( $language );
 	} catch ( Wamania\Snowball\NotFoundException $e ) {
