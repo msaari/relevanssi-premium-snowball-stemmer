@@ -6,16 +6,29 @@ This simple WordPress plugin adds the [Wamania PHP Stemmer](https://github.com/w
 
 Using this plugin requires Relevanssi Premium.
 
+## Installing
+
+You can use this as a Composer requirement:
+
+```
+{
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/msaari/relevanssi-premium-snowball-stemmer.git"
+    }
+  ],
+  "require": {
+      "msaari/relevanssi-premium-snowball-stemmer": "*"
+  }
+}
+```
+
+If you install the plugin manually, you need to use `composer install` to fetch the dependencies; they are not included in the package you get from GitHub.
+
 ## Usage
 
-Install the plugin. Then, in theme `functions.php` file, add these:
-
-```
-update_option( 'relevanssi_premium_stemmer_language', 'english' );
-add_filter( 'relevanssi_stemmer', 'relevanssi_premium_snowball_stemmer' );
-```
-
-If you are using English, you can skip the `update_option()` – the stemmer will assume English. You can use either the full language name in English, or the two-letter code.
+Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings page. You can set the stemmer language there and then just rebuild the index.
 
 ## License
 
