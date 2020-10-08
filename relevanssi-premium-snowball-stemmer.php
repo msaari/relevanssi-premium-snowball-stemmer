@@ -44,8 +44,8 @@ function relevanssi_premium_snowball_stemmer( $word ) {
 	}
 
 	$stemmed_word = $stemmer->stem( $word );
-	if ( is_string( $stemmed_word ) ) {
-		return $stemmed_word;
+	if ( is_string( $stemmed_word ) && $word !== $stemmed_word ) {
+		return $word . ' ' . $stemmed_word;
 	}
 
 	// User asked for a non-existing language or some other error happened.
