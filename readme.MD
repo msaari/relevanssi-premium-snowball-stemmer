@@ -35,6 +35,7 @@ Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings
 ### 1.1
 - Adds Finnish
 - Uses msaari/php-stemmer instead of wamania/php-stemmer
+- The stemmer returns both the stemmed word and the original word
 
 ## License
 
