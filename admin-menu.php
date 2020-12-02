@@ -38,19 +38,20 @@ function relevanssi_premium_snowball_stemmer_tab( $tabs ) {
  */
 function relevanssi_premium_snowball_stemmer_render_tab() {
 	$languages = array(
-		'Catalan'    => 'ca',
-		'Danish'     => 'da',
-		'Dutch'      => 'nl',
-		'English'    => 'en',
-		'French'     => 'fr',
-		'German'     => 'de',
-		'Italian'    => 'it',
-		'Norwegian'  => 'no',
-		'Portuguese' => 'pt',
-		'Romanian'   => 'ro',
-		'Russian'    => 'ru',
-		'Spanish'    => 'es',
-		'Swedish'    => 'sv',
+		'catalá (Catalan)'       => 'ca',
+		'dansk (Danish)'         => 'da',
+		'Deutsch (German)'       => 'de',
+		'English'                => 'en',
+		'español (Spanish)'      => 'es',
+		'français (French)'      => 'fr',
+		'italiano (Italian)'     => 'it',
+		'Nederlands (Dutch)'     => 'nl',
+		'norsk (Norwegian)'      => 'no',
+		'português (Portuguese)' => 'pt',
+		'românește (Romanian)'   => 'ro',
+		'русский язык (Russian)' => 'ru',
+		'suomi (Finnish)'        => 'fi',
+		'svensk (Swedish)'       => 'sv',
 	);
 
 	if ( ! empty( $_REQUEST ) && isset( $_REQUEST['submit'] ) ) {

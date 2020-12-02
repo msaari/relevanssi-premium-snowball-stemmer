@@ -30,6 +30,12 @@ If you install the plugin manually, you need to use `composer install` to fetch 
 
 Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings page. You can set the stemmer language there and then just rebuild the index.
 
+## Changelog
+
+### 1.1
+- Adds Finnish
+- Uses msaari/php-stemmer instead of wamania/php-stemmer
+
 ## License
 
 This plugin is licensed under GPL2 license. The Wamania PHP stemmer is by Wamania, and is licensed under the MIT license.

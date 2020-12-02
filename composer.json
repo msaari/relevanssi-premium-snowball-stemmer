@@ -3,7 +3,7 @@
     "description": "Snowball Stemmer for Relevanssi Premium",
     "type": "wordpress-plugin",
     "require": {
-        "wamania/php-stemmer": "^2.0"
+        "msaari/php-stemmer": "^2.0"
     },
     "license": "GPLv2",
     "authors": [
