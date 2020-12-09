@@ -2,6 +2,7 @@
     "name": "msaari/relevanssi-premium-snowball-stemmer",
     "description": "Snowball Stemmer for Relevanssi Premium",
     "type": "wordpress-plugin",
+    "version": "1.1.1",
     "repositories": [
         {
             "type": "vcs",
