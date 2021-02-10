@@ -32,6 +32,10 @@ Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings
 
 ## Changelog
 
+### 1.2
+- Returns to use wamania/php-stemmer now that it includes the Finnish stemmer.
+- Fixes a bug in the Finnish stemmer.
+
 ### 1.1.1
 - Adds `repositories` part to the `composer.json`
 

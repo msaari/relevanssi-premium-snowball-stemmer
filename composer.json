@@ -2,15 +2,15 @@
     "name": "msaari/relevanssi-premium-snowball-stemmer",
     "description": "Snowball Stemmer for Relevanssi Premium",
     "type": "wordpress-plugin",
-    "version": "1.1.1",
+    "version": "1.2",
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/msaari/php-stemmer"
+            "url": "https://github.com/wamania/php-stemmer"
         }
     ],
     "require": {
-        "msaari/php-stemmer": "v2.2.1"
+        "wamania/php-stemmer": "v2.2.0"
     },
     "license": "GPLv2",
     "authors": [
