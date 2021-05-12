@@ -51,3 +51,17 @@ function relevanssi_premium_snowball_stemmer( $word ) {
 	// User asked for a non-existing language or some other error happened.
 	return $word;
 }
+
+add_action(
+	'relevanssi_disable_stemmer',
+	function() {
+		remove_filter( 'relevanssi_stemmer', 'relevanssi_premium_snowball_stemmer' );
+	}
+);
+
+add_action(
+	'relevanssi_enable_stemmer',
+	function() {
+		add_filter( 'relevanssi_stemmer', 'relevanssi_premium_snowball_stemmer' );
+	}
+);

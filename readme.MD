@@ -32,6 +32,9 @@ Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings
 
 ## Changelog
 
+### 1.3
+- Adds `relevanssi_disable_stemmer` and `relevanssi_enable_stemmer` actions Relevanssi Premium 2.15.1 needs.
+
 ### 1.2
 - Returns to use wamania/php-stemmer now that it includes the Finnish stemmer.
 - Fixes a bug in the Finnish stemmer.
