@@ -52,7 +52,7 @@ function relevanssi_premium_snowball_stemmer( $word ) {
 	 * @param string $word     The word.
 	 * @param string $language The stemmer language.
 	 */
-	if ( apply_filters( 'relevanssi_stemmer_allow_stemming', true, $word, $language ) ) {
+	if ( ! apply_filters( 'relevanssi_stemmer_allow_stemming', true, $word, $language ) ) {
 		return $word;
 	}
 
