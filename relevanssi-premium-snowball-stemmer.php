@@ -43,6 +43,19 @@ function relevanssi_premium_snowball_stemmer( $word ) {
 		return $word;
 	}
 
+	/**
+	 * Filters whether a word can be stemmed.
+	 *
+	 * If this filter hook returns `false`, the word will be returned unstemmed.
+	 *
+	 * @param boolean If true, stem the word; if false, skip. Default true.
+	 * @param string $word     The word.
+	 * @param string $language The stemmer language.
+	 */
+	if ( apply_filters( 'relevanssi_stemmer_allow_stemming', true, $word, $language ) ) {
+		return $word;
+	}
+
 	$stemmed_word = $stemmer->stem( $word );
 	if ( is_string( $stemmed_word ) && $word !== $stemmed_word ) {
 		return $word . ' ' . $stemmed_word;
@@ -65,3 +78,4 @@ add_action(
 		add_filter( 'relevanssi_stemmer', 'relevanssi_premium_snowball_stemmer' );
 	}
 );
+
