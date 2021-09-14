@@ -32,6 +32,10 @@ Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings
 
 ## Changelog
 
+### 1.4
+- Adds the `relevanssi_stemmer_allow_stemming` filter hook to exclude words from being stemmed.
+- Updates wamania/php-stemmer to version 3.0.0.
+
 ### 1.3
 - Adds `relevanssi_disable_stemmer` and `relevanssi_enable_stemmer` actions Relevanssi Premium 2.15.1 needs.
 
