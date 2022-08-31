@@ -13,7 +13,7 @@
  * Plugin Name: Relevanssi Premium Snowball Stemmer
  * Plugin URI: https://www.relevanssi.com/snowball-stemmer/
  * Description: This plugin adds Snowball Stemmer for Relevanssi Premium.
- * Version: 1.4
+ * Version: 1.5
  * Author: Mikko Saari
  * Author URI: http://www.mikkosaari.fi/
  * Text Domain: relevanssi
@@ -58,6 +58,9 @@ function relevanssi_premium_snowball_stemmer( $word ) {
 
 	$stemmed_word = $stemmer->stem( $word );
 	if ( is_string( $stemmed_word ) && $word !== $stemmed_word ) {
+		if ( 'AND' === get_option( 'relevanssi_implicit_operator' ) ) {
+			return $stemmed_word;
+		}
 		return $word . ' ' . $stemmed_word;
 	}
 
