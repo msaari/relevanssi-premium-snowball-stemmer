@@ -34,7 +34,9 @@ require 'admin-menu.php';
  * @return string The stemmed word.
  */
 function relevanssi_premium_snowball_stemmer( $word ) {
-	require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+	if ( ! file_exists( plugin_dir_path( __FILE__ ) . 'vendor/autoload.php' ) ) {
+		require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+	}
 
 	$language = get_option( 'relevanssi_premium_snowball_stemmer_language', 'en' );
 	try {
