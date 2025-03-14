@@ -13,7 +13,7 @@
  * Plugin Name: Relevanssi Premium Snowball Stemmer
  * Plugin URI: https://www.relevanssi.com/snowball-stemmer/
  * Description: This plugin adds Snowball Stemmer for Relevanssi Premium.
- * Version: 1.5
+ * Version: 1.6
  * Author: Mikko Saari
  * Author URI: http://www.mikkosaari.fi/
  * Text Domain: relevanssi
@@ -36,7 +36,15 @@ require 'admin-menu.php';
 function relevanssi_premium_snowball_stemmer( $word ) {
 	require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-	$language = get_option( 'relevanssi_premium_snowball_stemmer_language', 'en' );
+	/**
+	 * If the filter returns true, stemmer uses the current language.
+	 * 
+	 * If the filter returns false, the language setting is picked up from the
+	 * option "relevanssi_premium_snowball_stemmer_language".
+	 */
+	$language = apply_filters( 'relevanssi_stem_multiple_languages', false )
+		? relevanssi_get_current_language( false )
+		: get_option( 'relevanssi_premium_snowball_stemmer_language', 'en' );
 	try {
 		$stemmer = Wamania\Snowball\StemmerFactory::create( $language );
 	} catch ( Wamania\Snowball\NotFoundException $e ) {

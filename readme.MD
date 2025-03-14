@@ -24,13 +24,18 @@ You can use this as a Composer requirement:
 }
 ```
 
-If you install the plugin manually, you need to use `composer install` to fetch the dependencies; they are not included in the package you get from GitHub.
+If you install the plugin manually, ensure the dependencies get installed.
 
 ## Usage
 
 Install the plugin. That will add a new "Stemmer" tab in the Relevanssi settings page. You can set the stemmer language there and then just rebuild the index.
 
 ## Changelog
+
+### 1.6
+
+- Updates wamania/php-stemmer to version 4.0.0.
+- Adds the `relevanssi_stem_multiple_languages` filter hook to use the current language for stemming.
 
 ### 1.5
 
