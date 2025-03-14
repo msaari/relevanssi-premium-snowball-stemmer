@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="PSR12 with Joomla specific additions">
+    <description>
+        This is a PSR-12 compliant ruleset for Joomla.
+    </description>
+
+    <file>src</file>
+    <file>Tests</file>
+
+    <exclude-pattern>*/Tests/Stubs/*</exclude-pattern>
+
+    <arg name="extensions" value="php"/>
+    <arg name="report" value="full"/>
+    <arg name="tab-width" value="4"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="colors" />
+    <arg value="sp"/>
+
+    <rule ref="PSR12">
+        <exclude name="Generic.Files.LineLength.MaxExceeded"/>
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+    </rule>
+</ruleset>

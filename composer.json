@@ -1,0 +1,17 @@
+{
+    "name": "msaari/relevanssi-premium-snowball-stemmer",
+    "description": "Snowball Stemmer for Relevanssi Premium",
+    "type": "wordpress-plugin",
+    "version": "1.5",
+    "require": {
+        "wamania/php-stemmer": "v4.0.0"
+    },
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Mikko Saari",
+            "email": "mikko@mikkosaari.fi"
+        }
+    ],
+    "homepage": "https://www.relevanssi.com/snowball-stemmer/"
+}
